@@ -1,0 +1,9 @@
+@media (max-width: 500px){
+    .home .search{
+        width: 100%;
+    }
+    .navbar ul{
+        gap: 1.4rem;
+    }
+    
+}
