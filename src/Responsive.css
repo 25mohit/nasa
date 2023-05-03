@@ -1,7 +1,11 @@
 @media (max-width: 500px){
     .home{
-        flex-wrap: wrap-reverse;
+        /* flex-wrap: wrap-reverse; */
+        padding: 0;
         
+    }
+    .result-card .section{
+        padding: 0;
     }
     .home .search{
         width: 100%;

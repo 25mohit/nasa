@@ -25,7 +25,7 @@ const Home = ({ setShowRaining }) => {
     <div className='home flex-column'>
       <div className="hero flex-justify-center">
         {!toogleHome && <div className="section">
-              k
+              
               {/* <img src={spaceImage} alt="" /> */}
           </div> }
           <div className="search">
@@ -33,6 +33,7 @@ const Home = ({ setShowRaining }) => {
           </div>
       </div>
       <div className="result-container">
+        <h2 style={{textAlign: 'right'}}>Total {apiData?.collection?.items?.length} Results Found</h2>
         {
           apiData?.collection?.items?.map((dt, ind) =>
           <ResultCard key={ind} data={dt}/>
