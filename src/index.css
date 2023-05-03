@@ -11,4 +11,8 @@ body {
   --footer-height: 2.5rem;
   --primary-color-dark: rgba(20,20,20,1);
   letter-spacing: 3px;
+  overflow: auto;
+}
+::-webkit-scrollbar{
+  display: none;
 }

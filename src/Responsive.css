@@ -1,9 +1,24 @@
 @media (max-width: 500px){
+    .home{
+        flex-wrap: wrap-reverse;
+        
+    }
     .home .search{
         width: 100%;
     }
     .navbar ul{
-        gap: 1.4rem;
+        gap: 1rem;
     }
     
+}
+@media (max-width: 978px){
+    .result-card{
+        flex-wrap: wrap;
+    }
+    .result-card .img-container{
+        min-width: 100%;
+    }
+    .result-card .section{
+        min-width: 100%;
+    }
 }

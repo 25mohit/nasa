@@ -1,0 +1,341 @@
+
+.stars {
+    position: fixed;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+.stars .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.stars .container span{
+    color: white;
+    position: absolute;
+    user-select: none;
+}
+.stars .container .fly-star{
+    width: 150px;
+    height: 4px;
+    border-radius: 0 15px 15px 0;
+    position: fixed;
+    transform: rotate(30deg);
+    opacity: 0.6;
+    background: linear-gradient(45deg, rgba(20,20,20,1), rgba(250,250,250,1));
+    animation: flyStar 2s ease-in infinite ;
+    animation-delay: -3s;
+    /* animation-timing-function: linear; */
+}
+.stars .container .fly-star.n2{
+    animation: flyStar2 2s ease-in infinite ;
+    background: linear-gradient(45deg, rgba(20,20,20,1), rgba(20,250,250,1));
+    animation-delay: -3s;
+}
+.stars .container .fly-star.n3{
+    animation: flyStar3 2s ease-in infinite ;
+    background: linear-gradient(45deg, rgba(20,20,20,1), rgba(20,50,250,1));
+    animation-delay: -2s;
+}
+.stars .container .fly-star.n4{
+    animation: flyStar4 2s ease-in infinite ;
+    background: linear-gradient(45deg, rgba(20,20,20,1), rgba(10,80,50,1));
+    animation-delay: -2s;
+}
+.stars .container .fly-star.n5{
+    animation: flyStar5 2s ease-in infinite ;
+    animation-delay: -3s;
+}
+.stars .container .fly-star.n6{
+    animation: flyStar6 2s ease-in infinite ;
+    animation-delay: -4s;
+}
+.stars .container .fly-star.n7{
+    animation: flyStar7 2s ease-in infinite ;
+    animation-delay: -5s;
+    background: linear-gradient(45deg, rgba(20,20,20,1), rgba(20,250,10,1));
+}
+.stars .container .fly-star.n8{
+    animation: flyStar8 2s ease-in infinite ;
+    animation-delay: -6s;
+}
+.stars .container .fly-star.n9{
+    background: linear-gradient(45deg, rgba(20,20,20,1), rgba(150,90,150,1));
+    animation: flyStar9 2s ease-in infinite ;
+    animation-delay: -1s;
+}
+.stars .container .fly-star.n10{
+    animation: flyStar10 2s ease-in infinite ;
+    animation-delay: -0.5s;
+}
+.stars .container .fly-star.n11{
+    animation: flyStar11 2s ease-in infinite ;
+    animation-delay: -7s;
+}
+.stars .container .fly-star.n12{
+    animation: flyStar12 2s ease-in infinite ;
+    background: linear-gradient(45deg, rgba(20,20,20,1), rgba(20,250,10,1));
+    animation-delay: -8s;
+}
+.stars .container .fly-star.n13{
+    animation: flyStar13 2s ease-in infinite ;
+    animation-delay: -9s;
+}
+.stars .container .fly-star.n14{
+    animation: flyStar14 2s ease-in infinite ;
+    animation-delay: -9s;
+}
+.stars .container .fly-star.n15{
+    animation: flyStar15 1s ease-in infinite ;
+    animation-delay: -9s;
+}
+.stars .container .fly-star.n16{
+    animation: flyStar16 1s ease-in infinite ;
+    background: linear-gradient(45deg, rgba(20,20,20,1), rgba(20,50,250,1));
+    animation-delay: -9s;
+}
+.stars .container .fly-star.n17{
+    animation: flyStar17 1s ease-in infinite ;
+    animation-delay: -9s;
+}
+.stars .container .fly-star.n18{
+    animation: flyStar18 1s ease-in infinite ;
+    background: linear-gradient(45deg, rgba(20,20,20,1), rgba(20,250,10,1));
+    animation-delay: -9s;
+}
+.stars .container .fly-star.n19{
+    animation: flyStar19 1s ease-in infinite ;
+    animation-delay: -9s;
+}
+.stars .container .fly-star.n20{
+    animation: flyStar20 1s ease-in infinite ;
+    background: linear-gradient(45deg, rgba(20,20,20,1), rgba(20,50,250,1));
+    animation-delay: -9s;
+}
+@keyframes flyStar{
+    from{
+        left: -20%;
+        top: -15%;
+    }
+    to{
+        left: 95%;
+        top: 100%;
+    }
+   
+}
+@keyframes flyStar2{
+    from{
+        left: -20%;
+        top: -25%;
+    }
+    to{
+        left: 95%;
+        top: 80%;
+    }
+}
+@keyframes flyStar3{
+    from{
+        left: 0%;
+        top: 20%;
+    }
+    to{
+        left: 95%;
+        top: 80%;
+    }
+}
+@keyframes flyStar4{
+    from{
+        left: -30%;
+        top: -15%;
+    }
+    to{
+        left: 95%;
+        top: 80%;
+    }
+}
+@keyframes flyStar5{
+    from{
+        left: -30%;
+        top: -20%;
+    }
+    to{
+        left: 95%;
+        top: 40%;
+    }
+}
+@keyframes flyStar6{
+    from{
+        left: -35%;
+        top: -25%;
+    }
+    to{
+        left: 95%;
+        top: 50%;
+    }
+}
+@keyframes flyStar7{
+    from{
+        left: -40%;
+        top: -30%;
+    }
+    to{
+        left: 95%;
+        top: 60%;
+    }
+}
+@keyframes flyStar8{
+    from{
+        left: -45%;
+        top: -35%;
+    }
+    to{
+        left: 95%;
+        top: 70%;
+    }
+}
+@keyframes flyStar9{
+    from{
+        left: -50%;
+        top: -40%;
+    }
+    to{
+        left: 95%;
+        top: 80%;
+    }
+}
+@keyframes flyStar10{
+    from{
+        left: -55%;
+        top: -45%;
+    }
+    to{
+        left: 95%;
+        top: 90%;
+    }
+}
+@keyframes flyStar11{
+    from{
+        left: -60%;
+        top: -10%;
+    }
+    to{
+        left: 95%;
+        top: 100%;
+    }
+}
+@keyframes flyStar12{
+    from{
+        left: -65%;
+        top: -15%;
+    }
+    to{
+        left: 95%;
+        top: 110%;
+    }
+}
+@keyframes flyStar13{
+    from{
+        left: -10%;
+        top: -15%;
+    }
+    to{
+        left: 95%;
+        top: 120%;
+    }
+}
+@keyframes flyStar14{
+    from{
+        left: -10%;
+        top: 50%;
+    }
+    to{
+        left: 35%;
+        top: 120%;
+    }
+}
+@keyframes flyStar15{
+    from{
+        left: -10%;
+        top: 50%;
+    }
+    to{
+        left: 55%;
+        top: 120%;
+    }
+}
+@keyframes flyStar16{
+    from{
+        left: -10%;
+        top: 55%;
+    }
+    to{
+        left: 35%;
+        top: 120%;
+    }
+}
+@keyframes flyStar17{
+    from{
+        left: -10%;
+        top: 60%;
+    }
+    to{
+        left: 65%;
+        top: 120%;
+    }
+}
+@keyframes flyStar18{
+    from{
+        left: -10%;
+        top: 45%;
+    }
+    to{
+        left: 50%;
+        top: 120%;
+    }
+}
+@keyframes flyStar19{
+    from{
+        left: -10%;
+        top: 55%;
+    }
+    to{
+        left: 25%;
+        top: 120%;
+    }
+}
+@keyframes flyStar20{
+    from{
+        left: -10%;
+        top: 65%;
+    }
+    to{
+        left: 15%;
+        top: 120%;
+    }
+}
+.stars .container #star{
+    color: white;
+    animation: starFlex 2500ms ease-out infinite;
+}
+.stars .container #onlyStar{
+    color: yellow;
+    animation: starFlex 3500ms ease-out infinite;
+}
+.stars .container .cStar{
+    color: orange;
+    font-size: 2rem;
+    animation: starFlex 1500ms ease-out infinite;
+}
+@keyframes starFlex {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+    }
+}

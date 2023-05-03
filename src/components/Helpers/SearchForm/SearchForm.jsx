@@ -1,9 +1,9 @@
 import React from 'react'
 
-const SearchForm = () => {
+const SearchForm = ({ setSearchText }) => {
   return (
     <div>
-        <input type="text" className='input'/>
+        <input type="text" className='input' onChange={(e) => setSearchText(e.target.value)}/>
     </div>
   )
 }
