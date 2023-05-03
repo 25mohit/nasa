@@ -101,4 +101,13 @@
 }
 .footer{
     height: var(--footer-height);
+    gap: 2rem;
+}
+.footer #footer-icon{
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+.footer #footer-icon:hover{
+    opacity: 1;
+    cursor: pointer;
 }
