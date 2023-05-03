@@ -5,7 +5,7 @@ export default function fetchAPI (sendingData) {
     const API = 'https://images-api.nasa.gov/'
 
     let newData = {}
-    const apiData = axios.get(`${API}/search?q=car`)
+    const apiData = axios.get(`${API}/search?q=india`)
     .then((res) => {
         newData = res.data
         sendingData(newData)
