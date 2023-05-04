@@ -35,7 +35,7 @@ const Home = ({ setShowRaining }) => {
       <div className="result-container">
         <h2 style={{textAlign: 'right'}}>Total {apiData?.collection?.items?.length} Results Found</h2>
         {
-          apiData?.collection?.items?.map((dt, ind) =>
+          apiData?.collection?.items?.slice(0,10)?.map((dt, ind) =>
           <ResultCard key={ind} data={dt}/>
           )
         }
