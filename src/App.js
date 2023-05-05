@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <div className='stars'>
+      <div className='stars'>
         <div className='container'>
           { showRaining && <section>
             <span className='fly-star' />
@@ -55,7 +55,7 @@ function App() {
                 >{s}</span>)
             }
         </div>
-      </div> */}
+      </div>
       <BrowserRouter>
         <NavBar />
         <Routes>
