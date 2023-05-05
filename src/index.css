@@ -10,9 +10,15 @@ body {
   --navbar-height: 4rem;
   --footer-height: 2.5rem;
   --primary-color-dark: rgba(20,20,20,1);
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   overflow: auto;
 }
 ::-webkit-scrollbar{
   display: none;
+}
+p{
+  line-height: 32px;
+}
+a{
+  text-decoration: none;
 }

@@ -19,14 +19,11 @@ const Home = ({ setShowRaining }) => {
           setToogleHome(false)
         }
     },[searchText])
-    console.log(apiData?.collection?.items);
-  
+    
   return (
     <div className='home flex-column'>
       <div className="hero flex-justify-center">
         {!toogleHome && <div className="section">
-              
-              {/* <img src={spaceImage} alt="" /> */}
           </div> }
           <div className="search">
               <SearchForm setSearchText={setSearchText}/>

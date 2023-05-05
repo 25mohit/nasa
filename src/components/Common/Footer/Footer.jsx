@@ -4,11 +4,11 @@ import { BsFacebook, BsGithub, BsInstagram, BsLinkedin, BsTwitter } from 'react-
 const Footer = () => {
   return (
     <div className='footer flex-justify-center'>
-      <BsGithub id='footer-icon'/>
-      <BsLinkedin id='footer-icon'/>
-      <BsTwitter id='footer-icon'/>
-      <BsFacebook id='footer-icon'/>
-      <BsInstagram id='footer-icon'/>
+      <a href='https://github.com/25mohit' target='_blank'><BsGithub /></a>
+      <a href='' target='_blank'><BsLinkedin /></a>
+      <a href='' target='_blank'><BsTwitter /></a>
+      <a href='' target='_blank'><BsFacebook /></a>
+      <a href='' target='_blank'><BsInstagram /></a>
     </div>
   )
 }

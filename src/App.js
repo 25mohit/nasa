@@ -8,6 +8,8 @@ import NavBar from './components/Common/NavBar/NavBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { stars } from './stars';
 import { useState } from 'react';
+import TechPort from './components/Page/TechPort/TechPort';
+import TechPortView from './components/Page/TechPort/TechPortView';
 
 // console.log("stars",stars);
 function App() {
@@ -16,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className='stars'>
+      {/* <div className='stars'>
         <div className='container'>
           { showRaining && <section>
             <span className='fly-star' />
@@ -53,11 +55,13 @@ function App() {
                 >{s}</span>)
             }
         </div>
-      </div>
+      </div> */}
       <BrowserRouter>
         <NavBar />
         <Routes>
           <Route path='/' exact element={<Home setShowRaining={setShowRaining}/>} />
+          <Route path='/techport' exact element={<TechPort />} />
+          <Route path='/techport-view' exact element={<TechPortView />} />
         </Routes>
       <Footer />
       </BrowserRouter>
