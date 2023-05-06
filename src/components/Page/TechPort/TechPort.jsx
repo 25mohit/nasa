@@ -1,18 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Hero from '../../Common/Hero/Hero'
-import { fetchTechport } from '../../../unitilies/API/API'
 import LayoutMain from '../../Common/Layout/LayoutMain'
 
 const TechPort = () => {
   const title = "Techport"
 
-  const [techPortData, setTechPortData] = useState([])
-
-  useEffect(() => {
-    // fetchTechport(setTechPortData, 117135)
-  },[])
-
-  console.log("techPortData", techPortData);
   return (
     <LayoutMain>
         <Hero title={title} link='/techport-view'>
