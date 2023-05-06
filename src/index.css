@@ -11,7 +11,7 @@ body {
   --footer-height: 2.5rem;
   --primary-color-dark: rgba(20,20,20,1);
   letter-spacing: 4px;
-  overflow: auto;
+  /* overflow: auto; */
 }
 ::-webkit-scrollbar{
   display: none;
@@ -21,4 +21,14 @@ p{
 }
 a{
   text-decoration: none;
+}
+.read-more{
+  font-size: 0.9rem;
+  user-select: none;
+}
+.read-more:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 1.4px;
 }

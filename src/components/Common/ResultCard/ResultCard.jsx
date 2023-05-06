@@ -1,6 +1,6 @@
 import moment from 'moment/moment';
 import React, { useState } from 'react'
-import { BsFillCameraFill } from 'react-icons/bs'
+import { BsFillBookmarkHeartFill, BsFillCameraFill } from 'react-icons/bs'
 import { FaUserAstronaut } from 'react-icons/fa'
 
 const ResultCard = (data) => {
@@ -9,9 +9,10 @@ const ResultCard = (data) => {
   console.log("data", data?.data);
   return (
     <div className='result-card'>
+      <BsFillBookmarkHeartFill id='bookmark-icon'/>
       <div className="img-container">
         {
-          data?.data?.links?.map((img, ind) => <img key={ind} src={img?.href} />)
+          data?.data?.links?.map((img, ind) => <img key={ind} src={img?.href} loading='lazy'/>)
         }
       </div>
       <section className='section'>
@@ -34,8 +35,8 @@ const ResultCard = (data) => {
             {
               d?.album?.map((al, inde) => <span key={inde}>{al}</span>)
             }
-            <p>{d?.description}</p>
-            <p>{d?.description_508}</p>
+            <p>{d?.description?.slice(0,300)} {d?.description.length > 300 && '....'} {d?.description.length > 300 && <span className='read-more'>Read More</span>}</p>
+            {d?.description.length < 300 && <p>{d?.description_508}</p> }
           </div>)
         }
       </section>
