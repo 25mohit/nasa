@@ -1,4 +1,5 @@
 import { RxTrackNext } from 'react-icons/rx'
+import { MdOutlineNavigateNext } from 'react-icons/md'
 
 const TechportResultCard = ({ techPortData }) => {
     const dt = techPortData
@@ -6,22 +7,26 @@ const TechportResultCard = ({ techPortData }) => {
   return (
     <div className='techport-result-card flex-column'>
         <header className='flex-column'>
-            <h2>{dt?.title} {dt?.projectId}</h2>
-            <span>{dt?.releaseStatusString}</span>
-            <div className='flex-center'>
+            <h2 className='flex-center'>{dt?.title} <MdOutlineNavigateNext id='title-icon'/>{dt?.projectId}</h2>
+            <div className='flex-center keywords-container'>
+                <span>{dt?.releaseStatusString}</span>
+                <span>Total {dt?.viewCount} Views</span>
+                <a href={dt?.website} target='_blank' className='visit-link'>Visit Website</a>
+            </div>
+            <div className='flex-center' style={{gap: '1.95rem'}}>
                 <span><b>Start Date : </b>{dt?.startDateString}</span>
                 <span><b>End Date : </b>{dt?.endDateString}</span>
                 <span><b>Last Updated on : </b>{dt?.lastUpdated}</span>
             </div>
             <div className="row">
                 <h4>Lead Organization Detail</h4>
-                <span><b>Name : </b>{dt?.leadOrganization?.organizationName} ({dt?.leadOrganization?.acronym})</span>
-                <span><b>Type : </b>{dt?.leadOrganization?.organizationTypePretty}</span>
-                <span className='flex-center'><b>Location : </b>
+                <p><b>Name : </b>{dt?.leadOrganization?.organizationName} ({dt?.leadOrganization?.acronym})</p>
+                <p><b>Type : </b>{dt?.leadOrganization?.organizationTypePretty}</p>
+                <p className='flex-center'><b>Location : </b>
                     <span>&nbsp;{dt?.leadOrganization?.city}</span>,
                     <span>&nbsp;{dt?.leadOrganization?.country?.name}</span>
-                </span>
-                <span><b>State Territory : </b>{dt?.leadOrganization?.stateTerritory?.abbreviation} {dt?.leadOrganization?.stateTerritory?.name}, {dt?.leadOrganization?.stateTerritory?.country?.abbreviation}</span>
+                </p>
+                <p><b>State Territory : </b>{dt?.leadOrganization?.stateTerritory?.abbreviation} {dt?.leadOrganization?.stateTerritory?.name}, {dt?.leadOrganization?.stateTerritory?.country?.abbreviation}</p>
             </div>
             <div dangerouslySetInnerHTML={{__html: dt?.description}}></div>
         </header>
@@ -119,11 +124,30 @@ const TechportResultCard = ({ techPortData }) => {
         </div>
         <div className="row">
             <h4>Responsible MD</h4>
-                <div className='dt-row'>
-                    <p><b>Name : </b>{dt?.responsibleMd?.organizationName} ({dt?.responsibleMd?.acronym})</p>
-                    <p><b>City : </b>{dt?.responsibleMd?.city}</p>
-                    <p><b>Type : </b>{dt?.responsibleMd?.organizationTypePretty} </p>
-                </div>
+            <div className='dt-row'>
+                <p><b>Name : </b>{dt?.responsibleMd?.organizationName} ({dt?.responsibleMd?.acronym})</p>
+                <p><b>City : </b>{dt?.responsibleMd?.city}</p>
+                <p><b>Type : </b>{dt?.responsibleMd?.organizationTypePretty} </p>
+            </div>
+        </div>
+        <div className="row">
+            <h4>States with Work</h4>
+            {
+                dt?.statesWithWork?.map((work, indx) => 
+                    <div key={indx} className='dt-row'>
+                        <p><b>{indx+1}. Name : </b>{work?.name} {work?.abbreviation}</p>
+                        <p><b>Country : </b>{work?.country?.name} {work?.country?.abbreviation}</p>
+                    </div>
+                )
+            }
+        </div>
+        <div className="row">
+            <h4>Supported Missions</h4>
+            <p><b>Description : </b>{dt?.supportedMission?.description}</p>
+            <div className="dt-row">
+                <h4><RxTrackNext />&nbsp;&nbsp;IKU</h4>
+                <p><b>Description : </b>{dt?.supportedMission?.lkuCodeType?.description}</p>
+            </div>
         </div>
     </div>
   )

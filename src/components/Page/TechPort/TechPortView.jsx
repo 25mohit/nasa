@@ -20,7 +20,7 @@ const TechPortView = () => {
         <div className="techport-view ">
             <header>
                 <p>To Perform a search about NASA's Techport, you need to search by entering NASA's Project ID, you can find
-                    All ID's here <a className='course-link' to=''>view all project id's</a>
+                    All ID's here <a className='visit-link' to=''>view all project id's</a>
                 </p>
                 <p>Some example ID's as bellow. You can Perform a search by Entering these ID's</p>
                 <div className="keywords-container">
