@@ -2,14 +2,20 @@ import moment from 'moment/moment';
 import React, { useState } from 'react'
 import { BsFillBookmarkHeartFill, BsFillCameraFill } from 'react-icons/bs'
 import { FaUserAstronaut } from 'react-icons/fa'
+import { ThemeStyles } from '../../../unitilies/ThemeStyle';
 
 const ResultCard = (data) => {
   const [rst, setRst] = useState(data?.data?.data)
 
   console.log("data", data?.data);
+
+  const addBookmarkHandler = (bookmarkData) => {
+    console.log("bookmarkData", bookmarkData);
+  }
+
   return (
-    <div className='result-card'>
-      <BsFillBookmarkHeartFill id='bookmark-icon'/>
+    <div className='result-card' style={ThemeStyles.resultCard}>
+      <BsFillBookmarkHeartFill id='bookmark-icon' onClick={() => addBookmarkHandler(data?.data)}/>
       <div className="img-container">
         {
           data?.data?.links?.map((img, ind) => <img key={ind} src={img?.href} loading='lazy'/>)

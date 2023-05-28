@@ -10,14 +10,16 @@ import { stars } from './stars';
 import { useState } from 'react';
 import TechPort from './components/Page/TechPort/TechPort';
 import TechPortView from './components/Page/TechPort/TechPortView';
+import Bookmark from './components/Page/Bookmark';
+import { ThemeStyles } from './unitilies/ThemeStyle';
+import { Theme } from './unitilies/Theme';
 
-// console.log("stars",stars);
 function App() {
   
   const [showRaining, setShowRaining] = useState(false)
 
   return (
-    <div className="App">
+    <div className="App" style={ThemeStyles.mainBD}>
       <div className='stars'>
         <div className='container'>
           { showRaining && <section>
@@ -43,7 +45,7 @@ function App() {
             <span className='fly-star n20' />
           </section>}
             {
-              stars?.map((s, ind) => 
+              Theme() === 'dark' && stars?.map((s, ind) => 
               <span id={s == '*.' && 'star'  || s == '*' && 'onlyStar'} className={s == '.' && 'cStar'} key={ind} style={{
                 top: `${Math.floor(Math.random()*(ind*Math.random()*30))}px`, 
                 left: `${Math.floor(Math.random()*(ind*Math.random()*30))}px`,
@@ -61,6 +63,7 @@ function App() {
         <Routes>
           <Route path='/' exact element={<Home setShowRaining={setShowRaining}/>} />
           <Route path='/techport' exact element={<TechPort />} />
+          <Route path='/bookmark' exact element={<Bookmark />} />
           <Route path='/techport-view' exact element={<TechPortView />} />
         </Routes>
       <Footer />
